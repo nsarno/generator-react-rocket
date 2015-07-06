@@ -1,5 +1,43 @@
 {
-  "name": "package",
+  "name": "<%= appName %>",
   "version": "0.0.0",
-  "dependencies": {}
+  "description": "<%= appDescription %>",
+  "main": "Gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/<%= username %>/<%= repo %>.git"
+  },
+  "author": "<%= username %>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/<%= username %>/<%= repo %>/issues"
+  },
+  "homepage": "https://github.com/<%= username %>/<%= repo %>",
+  "dependencies": {
+    "classnames": "^2.1.2",
+    "flux": "^2.0.3",
+    "jquery": "^2.1.4",
+    "jwt-decode": "^1.1.1",
+    "keymirror": "^0.1.1",
+    "react": "^0.13.3",
+    "react-document-title": "^1.0.2",
+    "react-router": "^0.13.3",
+    "react-tools": "^0.13.3"
+  },
+  "devDependencies": {
+    "babel-core": "^5.5.4",
+    "babel-loader": "^5.1.4",
+    "browser-sync": "^2.7.6",
+    "del": "^1.2.0",
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.5.2",
+    "gulp-sass": "^2.0.1",
+    "gulp-sourcemaps": "^1.5.2",
+    "node-libs-browser": "^0.5.2",
+    "webpack": "^1.9.10",
+    "webpack-stream": "^2.0.0"
+  }
 }
