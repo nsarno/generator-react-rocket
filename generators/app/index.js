@@ -4,6 +4,7 @@ var yeoman = require('yeoman-generator');
 var chalk = require('chalk');
 var yosay = require('yosay');
 var _ = require('lodash');
+var execSync = require('child_process').execSync;
 
 module.exports = yeoman.generators.Base.extend({
 
@@ -26,11 +27,11 @@ module.exports = yeoman.generators.Base.extend({
       message: 'Your project description',
     }, {
       type: 'input',
-      name: 'ghUsername',
+      name: 'username',
       message: 'Your github username',
     }, {
       type: 'input',
-      name: 'ghRepo',
+      name: 'repo',
       message: 'The github repository for your project',
     }];
 
@@ -50,8 +51,8 @@ module.exports = yeoman.generators.Base.extend({
         { 
           appName: this.props.name,
           appDescription: this.props.descrition,
-          username: this.props.ghUsername,
-          repo: this.props.ghRepo
+          username: this.props.username,
+          repo: this.props.repo
         }
       );
       this.fs.copy(this.templatePath('gitignore'), this.destinationPath('.gitignore'));
@@ -69,13 +70,10 @@ module.exports = yeoman.generators.Base.extend({
   },
 
   end: function() {
-    var origin = 'git@github.com:' + this.props.ghUsername + '/' + this.props.ghRepo + '.git';
-    console.log('origin', origin);
-    this.spawnCommand('git', ['init']).on('exit', function() {
-      this.spawnCommand('git', ['remote', 'add', 'origin', origin]);  
-      this.spawnCommand('git', ['add', '--all']).on('exit', function() {
-        this.spawnCommand('git', ['commit', '-m', 'initial commit from generator']);
-      }.bind(this));
-    }.bind(this));
+    var origin = 'git@github.com:' + this.props.username + '/' + this.props.repo + '.git';
+    execSync('git init');
+    execSync('git remote add origin ' + origin);
+    execSync('git add --all');
+    execSync('git commit -m "initial commit from generator"');
   }
 });
