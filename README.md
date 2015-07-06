@@ -2,10 +2,6 @@
 
 A [Yeoman](http://yeoman.io/) generator to bootstrap a React/Flux application powered by Gulp! 🚀
 
-### See also
-
-[Rocket](https://github.com/nsarno/rocket), a Rails API application template.
-
 ## Getting Started
 
 ### Install
@@ -17,6 +13,10 @@ mkdir myapp
 cd myapp
 yo react-rocket
 ```
+
+## See also
+
+[Rocket](https://github.com/nsarno/rocket), a Rails API application template.
 
 ## License
 
