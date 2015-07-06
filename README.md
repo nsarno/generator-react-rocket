@@ -1,46 +1,49 @@
 # generator-react-rocket [![Build Status](https://secure.travis-ci.org/nsarno/generator-react-rocket.png?branch=master)](https://travis-ci.org/nsarno/generator-react-rocket)
 
-> [Yeoman](http://yeoman.io) generator
-
+A [Yeoman](http://yeoman.io/) generator to bootstrap a React/Flux application powered by Gulp! 🚀
 
 ## Getting Started
 
-### What is Yeoman?
-
-Trick question. It's not a thing. It's this guy:
-
-![](http://i.imgur.com/JHaAlBJ.png)
-
-Basically, he wears a top hat, lives in your computer, and waits for you to tell him what kind of application you wish to create.
-
-Not every new computer comes with a Yeoman pre-installed. He lives in the [npm](https://npmjs.org) package repository. You only have to ask for him once, then he packs up and moves into your hard drive. *Make sure you clean up, he likes new and shiny things.*
+### Install
 
 ```bash
 npm install -g yo
-```
-
-### Yeoman Generators
-
-Yeoman travels light. He didn't pack any generators when he moved in. You can think of a generator like a plug-in. You get to choose what type of application you wish to create, such as a Backbone application or even a Chrome extension.
-
-To install generator-react-rocket from npm, run:
-
-```bash
 npm install -g generator-react-rocket
 ```
 
-Finally, initiate the generator:
+### Usage
 
 ```bash
+mkdir myapp && cd myapp
 yo react-rocket
 ```
 
-### Getting To Know Yeoman
+### Gulp tasks
 
-Yeoman has a heart of gold. He's a person with feelings and opinions, but he's very easy to work with. If you think he's too opinionated, he can be easily convinced.
+`gulp` or `gulp serve` to start a developement web server with live reload
+`gulp build` to build the app in dist/ directory
+`gulp clean` to clean up dist/ directory
 
-If you'd like to get to know Yeoman better and meet some of his friends, [Grunt](http://gruntjs.com) and [Bower](http://bower.io), check out the complete [Getting Started Guide](https://github.com/yeoman/yeoman/wiki/Getting-Started).
+## Features
 
+- Build with Gulp
+- Compile sass stylesheets
+- Compile React (JSX) components (with babel)
+- ES6 to ES5 (with babel)
+- Handle CommonJS dependencies with Webpack
+- Browser sync
+
+## Future improvements
+
+- Different environments (development, staging, production)
+- Prepare assets for production (uglify, minify, etc...)
+- Add a gulp task to run tests
+- Lint JS code
+- Prevent browser cache problems with gulp-rev
+
+## See also
+
+[Rocket](https://github.com/nsarno/rocket), a Rails API application template.
 
 ## License
 
