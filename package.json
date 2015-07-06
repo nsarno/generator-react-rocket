@@ -1,7 +1,7 @@
 {
   "name": "generator-react-rocket",
-  "version": "0.0.0",
-  "description": "Yeoman generator",
+  "version": "0.1.0",
+  "description": "Yeoman generator for a React web app with Gulp & Webpack",
   "license": "MIT",
   "main": "app/index.js",
   "repository": "nsarno/generator-react-rocket",
@@ -17,7 +17,14 @@
     "generators"
   ],
   "keywords": [
-    "yeoman-generator"
+    "yeoman-generator",
+    "react",
+    "gulp",
+    "flux",
+    "jwt",
+    "rocket",
+    "webpack",
+    "babel"
   ],
   "dependencies": {
     "chalk": "^1.0.0",
