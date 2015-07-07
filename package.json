@@ -1,6 +1,6 @@
 {
   "name": "generator-react-rocket",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Yeoman generator for a React web app with Gulp & Webpack",
   "license": "MIT",
   "main": "app/index.js",
