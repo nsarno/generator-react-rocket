@@ -29,7 +29,7 @@ describe('react-rocket:app', function () {
     assert.file([
       'package.json',
       '.gitignore',
-      'Gulpfile.js',
+      'gulpfile.js',
       'webpack.config.js',
       'src/index.html',
       'src/scripts/components/App.jsx',
