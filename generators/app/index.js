@@ -57,7 +57,7 @@ module.exports = yeoman.generators.Base.extend({
       );
       this.fs.copy(this.templatePath('gitignore'), this.destinationPath('.gitignore'));
       this.fs.copy(this.templatePath('webpack.config.js'), this.destinationPath('webpack.config.js'));
-      this.fs.copy(this.templatePath('Gulpfile.js'), this.destinationPath('Gulpfile.js'));
+      this.fs.copy(this.templatePath('gulpfile.js'), this.destinationPath('gulpfile.js'));
       this.fs.copy(this.templatePath('src'), this.destinationPath('src'));
       this.fs.copy(this.templatePath('src/scripts/actions/.keep'), this.destinationPath('src/scripts/actions/.keep'));
       this.fs.copy(this.templatePath('src/scripts/services/.keep'), this.destinationPath('src/scripts/services/.keep'));
