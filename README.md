@@ -2,6 +2,17 @@
 
 A [Yeoman](http://yeoman.io/) generator to bootstrap a React/Flux application powered by Gulp! 🚀
 
+## Features
+
+- Flux directory structure
+- Build with Gulp
+  - Compile sass stylesheets
+  - Compile React (JSX) components (with babel)
+  - ES6 to ES5 (with babel)
+  - Handle CommonJS dependencies with Webpack
+  - Browser sync
+- Component sub-generator
+
 ## Getting Started
 
 ### Install
@@ -24,14 +35,15 @@ yo react-rocket
 `gulp build` to build the app in dist/ directory
 `gulp clean` to clean up dist/ directory
 
-## Features
+### Sub generators
 
-- Build with Gulp
-- Compile sass stylesheets
-- Compile React (JSX) components (with babel)
-- ES6 to ES5 (with babel)
-- Handle CommonJS dependencies with Webpack
-- Browser sync
+## react-rocket:component
+
+Generates a JSX component class in `src/scripts/components`
+
+```bash
+yo react-rocket:component
+```
 
 ## Future improvements
 
