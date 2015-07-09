@@ -7,6 +7,9 @@ var webpack = require('webpack-stream');
 var browserSync = require('browser-sync');
 var sass = require('gulp-sass');
 var concat = require('gulp-concat');
+var jshint = require('gulp-jshint');
+var jsxhint = require('jshint-jsx');
+var stylish = require('jshint-stylish');
 
 var path = {
   scripts: ['src/scripts/**/*.js', 'src/scripts/**/*.jsx'],
@@ -16,7 +19,16 @@ var path = {
   webpackConfig: './webpack.config.js'
 }
 
-gulp.task('scripts', function() {
+gulp.task('lint', function() {
+  return gulp.src(path.scripts)
+    .pipe(jshint({
+      linter: jsxhint.JSXHINT,
+      esnext: true
+    }))
+    .pipe(jshint.reporter(stylish));
+});
+
+gulp.task('scripts', ['lint'], function() {
   return gulp.src(path.scripts)
     .pipe(sourcemaps.init())
       .pipe(webpack(require(path.webpackConfig)))
