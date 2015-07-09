@@ -34,13 +34,18 @@
     "del": "^1.2.0",
     "gulp": "^3.9.0",
     "gulp-concat": "^2.5.2",
+    "gulp-if": "^1.2.5",
     "gulp-jshint": "^1.11.2",
+    "gulp-minify-css": "^1.2.0",
+    "gulp-preprocess": "^1.2.0",
     "gulp-sass": "^2.0.1",
     "gulp-sourcemaps": "^1.5.2",
+    "gulp-uglify": "^1.2.0",
     "jshint-jsx": "^0.4.1",
     "jshint-stylish": "^2.0.1",
     "node-libs-browser": "^0.5.2",
     "webpack": "^1.9.10",
-    "webpack-stream": "^2.0.0"
+    "webpack-stream": "^2.0.0",
+    "yargs": "^3.15.0"
   }
 }

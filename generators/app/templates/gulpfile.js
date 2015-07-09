@@ -10,6 +10,11 @@ var concat = require('gulp-concat');
 var jshint = require('gulp-jshint');
 var jsxhint = require('jshint-jsx');
 var stylish = require('jshint-stylish');
+var gulpif = require('gulp-if');
+var uglify = require('gulp-uglify');
+var minifyCss = require('gulp-minify-css');
+var argv = require('yargs').argv;
+var preprocess = require('gulp-preprocess');
 
 var path = {
   scripts: ['src/scripts/**/*.js', 'src/scripts/**/*.jsx'],
@@ -32,7 +37,9 @@ gulp.task('scripts', ['lint'], function() {
   return gulp.src(path.scripts)
     .pipe(sourcemaps.init())
       .pipe(webpack(require(path.webpackConfig)))
+      .pipe(gulpif(argv.production, uglify()))
     .pipe(sourcemaps.write('.'))
+    .pipe(preprocess({context: {ENV: argv.production ? 'production' : 'development'}}))
     .pipe(gulp.dest(path.dist));
 });
 
@@ -45,6 +52,7 @@ gulp.task('styles', function() {
   return gulp.src(path.styles)
     .pipe(sourcemaps.init())
       .pipe(sass().on('error', sassError))
+      .pipe(gulpif(argv.production, minifyCss()))
     .pipe(sourcemaps.write('.'))
     .pipe(concat('bundle.css'))
     .pipe(gulp.dest(path.dist));
