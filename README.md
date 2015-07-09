@@ -35,9 +35,7 @@ yo react-rocket
 `gulp build` to build the app in dist/ directory
 `gulp clean` to clean up dist/ directory
 
-### Sub generators
-
-## react-rocket:component
+### react-rocket:component
 
 Generates a JSX component class in `src/scripts/components`
 
