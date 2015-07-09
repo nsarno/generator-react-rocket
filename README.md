@@ -6,10 +6,11 @@ A [Yeoman](http://yeoman.io/) generator to bootstrap a React/Flux application po
 
 - Flux directory structure
 - Build with Gulp
-  - Compile sass stylesheets
   - Compile React (JSX) components (with babel)
-  - ES6 to ES5 (with babel)
   - Handle CommonJS dependencies with Webpack
+  - ES6 to ES5 (with babel)
+  - Lint JS and JSX code with [JSHint](https://github.com/spalger/gulp-jshint)
+  - Compile sass stylesheets
   - Browser sync
 - Component sub-generator
 
@@ -48,7 +49,6 @@ yo react-rocket:component
 - Different environments (development, staging, production)
 - Prepare assets for production (uglify, minify, etc...)
 - Add a gulp task to run tests
-- Lint JS code
 - Prevent browser cache problems with gulp-rev
 
 ## See also
