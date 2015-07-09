@@ -5,13 +5,17 @@ A [Yeoman](http://yeoman.io/) generator to bootstrap a React/Flux application po
 ## Features
 
 - Flux directory structure
-- Build with Gulp
-  - Compile React (JSX) components (with babel)
-  - Handle CommonJS dependencies with Webpack
-  - ES6 to ES5 (with babel)
+- Build with [Gulp](http://gulpjs.com/)
+  - Compile React (JSX) components (with [Babel](https://babeljs.io/))
+  - Handle CommonJS dependencies with [Webpack](http://webpack.github.io/)
+  - ES6 to ES5 (with [Babel](https://babeljs.io/))
   - Lint JS and JSX code with [JSHint](https://github.com/spalger/gulp-jshint)
   - Compile sass stylesheets
   - Browser sync
+  - Uglify javascript with [UglifyJS](https://github.com/terinjokes/gulp-uglify)
+  - Minify css with [gulp-minify-css](https://github.com/murphydanger/gulp-minify-css)
+  - Build for Production with `--production`
+  - Preprocess javascript with [gulp-preprocess](https://github.com/jas/gulp-preprocess)
 - Component sub-generator
 
 ## Getting Started
@@ -32,9 +36,9 @@ yo react-rocket
 
 ### Gulp tasks
 
-`gulp` or `gulp serve` to start a developement web server with live reload
-`gulp build` to build the app in dist/ directory
-`gulp clean` to clean up dist/ directory
+- `gulp` or `gulp serve` to start a developement web server with live reload (supports the `--production` flag)
+- `gulp build` to build the app in dist/ directory (supports the `--production` flag)
+- `gulp clean` to clean up dist/ directory
 
 ### react-rocket:component
 
@@ -46,10 +50,9 @@ yo react-rocket:component
 
 ## Future improvements
 
-- Different environments (development, staging, production)
-- Prepare assets for production (uglify, minify, etc...)
-- Add a gulp task to run tests
-- Prevent browser cache problems with gulp-rev
+- Add a gulp task to run tests with Karma (or something similar)
+- More sub-generators for commonly created files
+- Remove npm dependencies and use bower components instead
 
 ## See also
 
