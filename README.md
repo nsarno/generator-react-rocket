@@ -1,4 +1,4 @@
-# generator-react-rocket [![Build Status](https://secure.travis-ci.org/nsarno/generator-react-rocket.png?branch=master)](https://travis-ci.org/nsarno/generator-react-rocket)
+# generator-react-rocket [![Build Status](https://travis-ci.org/nsarno/generator-react-rocket.svg?branch=master)](https://travis-ci.org/nsarno/generator-react-rocket) [![npm version](https://badge.fury.io/js/generator-react-rocket.svg)](http://badge.fury.io/js/generator-react-rocket)
 
 A [Yeoman](http://yeoman.io/) generator to bootstrap a React/Flux application powered by Gulp! 🚀
 
