@@ -1,7 +1,7 @@
 {
   "name": "generator-react-rocket",
   "version": "0.2.0",
-  "description": "Yeoman generator for a React web app with Gulp & Webpack",
+  "description": "Yeoman generator to bootstrap a Flux/React web app with Gulp",
   "license": "MIT",
   "main": "app/index.js",
   "repository": "nsarno/generator-react-rocket",
