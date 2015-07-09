@@ -69,7 +69,7 @@ class AuthStore extends EventEmitter {
 
       default:
         return true;
-    };
+    }
   }
 
   get user() {
