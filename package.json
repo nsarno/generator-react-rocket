@@ -21,10 +21,11 @@
     "react",
     "gulp",
     "flux",
-    "jwt",
-    "rocket",
     "webpack",
-    "babel"
+    "babel",
+    "karma",
+    "mocha",
+    "browser-sync"
   ],
   "dependencies": {
     "chalk": "^1.0.0",
