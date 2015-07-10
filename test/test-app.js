@@ -25,12 +25,24 @@ describe('react-rocket:app', function () {
       .on('end', done);
   });
 
-  it('creates files', function () {
+  it('creates build files', function () {
     assert.file([
       'package.json',
-      '.gitignore',
       'gulpfile.js',
-      'webpack.config.js',
+      'webpack.config.js'
+    ]);
+  });
+
+  it('creates karma config files', function () {
+    assert.file([
+      '.travis.yml',
+      'tests.webpack.js',
+      'karma.conf.js'
+    ]);
+  });
+
+  it('creates a flux app skeleton', function () {
+    assert.file([
       'src/index.html',
       'src/scripts/components/App.jsx',
       'src/scripts/dispatcher/Dispatcher.js',
@@ -38,9 +50,18 @@ describe('react-rocket:app', function () {
     ]);
   });
 
-  it('inits a git repository', function () {
-    assert.file(['.git/config']);
+  it('inits a git repository with a .gitignore', function () {
+    assert.file([
+      '.gitignore',
+      '.git/config'
+    ]);
   });
+
+  // it('has valid dependencies', function () {
+  //   assert.fileContent('package.json', 
+  //     new RegExp('jquery')
+  //   );
+  // });
 
   it('adds a remote origin', function () {
     assert.fileContent('.git/config', new RegExp('[remote "origin"]'));
