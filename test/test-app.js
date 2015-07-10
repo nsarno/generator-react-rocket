@@ -44,6 +44,7 @@ describe('react-rocket:app', function () {
   it('creates a flux app skeleton', function () {
     assert.file([
       'src/index.html',
+      'src/scripts/components/__tests__',
       'src/scripts/components/App.jsx',
       'src/scripts/dispatcher/Dispatcher.js',
       'src/scripts/constants/Constants.js'
@@ -56,12 +57,6 @@ describe('react-rocket:app', function () {
       '.git/config'
     ]);
   });
-
-  // it('has valid dependencies', function () {
-  //   assert.fileContent('package.json', 
-  //     new RegExp('jquery')
-  //   );
-  // });
 
   it('adds a remote origin', function () {
     assert.fileContent('.git/config', new RegExp('[remote "origin"]'));

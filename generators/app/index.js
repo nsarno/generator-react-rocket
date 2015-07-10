@@ -56,19 +56,42 @@ module.exports = yeoman.generators.Base.extend({
         }
       );
 
-      this.fs.copy(this.templatePath('gitignore'), this.destinationPath('.gitignore'));
+      this.fs.copy(
+        this.templatePath('gitignore'),
+        this.destinationPath('.gitignore'));
 
-      this.fs.copy(this.templatePath('gulpfile.js'), this.destinationPath('gulpfile.js'));
-      this.fs.copy(this.templatePath('webpack.config.js'), this.destinationPath('webpack.config.js'));
+      this.fs.copy(
+        this.templatePath('gulpfile.js'),
+        this.destinationPath('gulpfile.js'));
+      this.fs.copy(
+        this.templatePath('webpack.config.js'),
+        this.destinationPath('webpack.config.js'));
 
-      this.fs.copy(this.templatePath('travis.yml'), this.destinationPath('.travis.yml'));
-      this.fs.copy(this.templatePath('tests.webpack.js'), this.destinationPath('tests.webpack.js'));
-      this.fs.copy(this.templatePath('karma.conf.js'), this.destinationPath('karma.conf.js'));
+      this.fs.copy(
+        this.templatePath('travis.yml'),
+        this.destinationPath('.travis.yml'));
+      this.fs.copy(
+        this.templatePath('tests.webpack.js'),
+        this.destinationPath('tests.webpack.js'));
+      this.fs.copy(
+        this.templatePath('karma.conf.js'),
+        this.destinationPath('karma.conf.js'));
       
-      this.fs.copy(this.templatePath('src'), this.destinationPath('src'));
-      this.fs.copy(this.templatePath('src/scripts/actions/.keep'), this.destinationPath('src/scripts/actions/.keep'));
-      this.fs.copy(this.templatePath('src/scripts/services/.keep'), this.destinationPath('src/scripts/services/.keep'));
-      this.fs.copy(this.templatePath('dist/.keep'), this.destinationPath('dist/.keep'));
+      this.fs.copy(
+        this.templatePath('src'),
+        this.destinationPath('src'));
+      this.fs.copy(
+        this.templatePath('src/scripts/components/__tests__/.keep'),
+        this.destinationPath('src/scripts/components/__tests__/.keep'));
+      this.fs.copy(
+        this.templatePath('src/scripts/actions/.keep'),
+        this.destinationPath('src/scripts/actions/.keep'));
+      this.fs.copy(
+        this.templatePath('src/scripts/services/.keep'),
+        this.destinationPath('src/scripts/services/.keep'));
+      this.fs.copy(
+        this.templatePath('dist/.keep'),
+        this.destinationPath('dist/.keep'));
     }
   },
 
