@@ -17,4 +17,8 @@ describe('react-rocket:component', function () {
   it('creates a component file', function() {
     assert.file('src/scripts/components/' + name + '.jsx');
   });
+
+  it('creates a test file for the component', function() {
+    assert.file('src/scripts/components/__tests__/' + name + '-test.js');
+  });
 });
