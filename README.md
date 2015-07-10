@@ -16,6 +16,7 @@ A [Yeoman](http://yeoman.io/) generator to bootstrap a React/Flux application po
   - Minify css with [gulp-minify-css](https://github.com/murphydanger/gulp-minify-css)
   - Build for Production with `--production`
   - Preprocess javascript with [gulp-preprocess](https://github.com/jas/gulp-preprocess)
+- Components testing with Karma
 - Component sub-generator
 
 ## Getting Started
@@ -34,6 +35,12 @@ mkdir myapp && cd myapp
 yo react-rocket
 ```
 
+### Run your tests (with Karma)
+
+```bash
+npm test
+```
+
 ### Gulp tasks
 
 - `gulp` or `gulp serve` to start a developement web server with live reload (supports the `--production` flag)
@@ -42,7 +49,7 @@ yo react-rocket
 
 ### react-rocket:component
 
-Generates a JSX component class in `src/scripts/components`
+Generates a JSX component class in `src/scripts/components` and the associated test file in `src/scripts/components/__tests__`
 
 ```bash
 yo react-rocket:component
@@ -50,9 +57,9 @@ yo react-rocket:component
 
 ## Future improvements
 
-- Add a gulp task to run tests with Karma (or something similar)
 - More sub-generators for commonly created files
 - Remove npm dependencies and use bower components instead
+- Create a gulp task to run tests
 
 ## See also
 
