@@ -35,12 +35,6 @@ mkdir myapp && cd myapp
 yo react-rocket
 ```
 
-### Run your tests (with Karma)
-
-```bash
-npm test
-```
-
 ### Gulp tasks
 
 - `gulp` or `gulp serve` to start a developement web server with live reload (supports the `--production` flag)
@@ -53,6 +47,12 @@ Generates a JSX component class in `src/scripts/components` and the associated t
 
 ```bash
 yo react-rocket:component
+```
+
+### Run your tests (with Karma)
+
+```bash
+npm test
 ```
 
 ## Future improvements
